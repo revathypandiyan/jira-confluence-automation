@@ -1,0 +1,50 @@
+# Module 10 Completion Report
+
+## Instruction Files
+```text
+    Directory: C:\workspace\hello-genai\work\module03-task\instructions
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        10-10-2026     12:53            839 create-status-report.agent.md
+-a----        10-10-2026     17:03           1165 create-technical-task.agent.m
+                                                  d
+-a----        10-10-2026     16:41           1181 creating-instructions.agent.m
+                                                  d
+-a----        10-10-2026     17:05            950 main.agent.md
+```
+
+## main.agent.md Contents
+```markdown
+# Instructions Catalog
+
+## Instructions
+
+- [`./instructions/creating-instructions.agent.md`](./creating-instructions.agent.md) — Create or update project instructions and configure their entry points.
+	+ Keywords: create instructions, agent setup, Copilot configuration
+- [`./instructions/create-status-report.agent.md`](./create-status-report.agent.md) — Generate concise weekly status reports.
+	+ Keywords: weekly status, accomplishments, blockers
+- [`./instructions/create-technical-task.agent.md`](./create-technical-task.agent.md) — Break requirements into implementation tasks, acceptance criteria, dependencies, and testing considerations.
+	+ Keywords: technical tasks, implementation plan, acceptance criteria, dependencies, testing
+
+## Planned Instructions
+
+- `write-meeting-notes.agent.md` — Meeting summary with action items and owners.
+- `generate-jira-query.agent.md` — JQL queries for common reporting scenarios.
+```
+
+## Sample Instruction
+- File: `create-technical-task.agent.md`
+- Contents:
+```markdown
+- Treat the supplied requirement as scope; do not implement code or add unrequested features.
+- Identify ambiguities that change scope, behavior, or dependencies; ask focused questions when they block a useful plan, otherwise state assumptions explicitly.
+- Break the requirement into small, ordered, independently verifiable implementation tasks.
+- Give each implementation task a stable ID and concrete outcome; keep each task actionable and avoid combining unrelated work.
+- Write observable, testable acceptance criteria that define when the requested behavior is complete.
+- List dependencies between task IDs and explain ordering constraints; state `None` when no dependencies exist.
+- Include testing considerations for relevant unit, integration, end-to-end, validation, edge-case, accessibility, security, and regression risks.
+- Do not present testing ideas as completed tests or imply that unverified behavior has passed.
+- Output Markdown with exactly these sections: Implementation Tasks, Acceptance Criteria, Dependencies, Testing Considerations.
+- Use concise bullet points under each section; use task checkboxes for implementation tasks.
+```

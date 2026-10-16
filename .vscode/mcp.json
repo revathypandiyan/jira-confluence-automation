@@ -1,0 +1,37 @@
+{
+  "servers": {
+    "echo-windows": {
+      "command": "powershell",
+      "args": ["-NoLogo", "-NoProfile", "-NonInteractive", "-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}/work/module03-task/mcp-echo.ps1"]
+    },
+    "time-server": {
+      "command": "powershell",
+      "args": [
+        "-NoLogo",
+        "-NoProfile",
+        "-NonInteractive",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}/work/module03-task/time-server.ps1"
+      ]
+    },
+    "calculator": {
+      "command": "powershell",
+      "args": [
+        "-NoLogo",
+        "-NoProfile",
+        "-NonInteractive",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}/work/module03-task/calculator-server.ps1"
+      ]
+    },
+     "github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/"
+    }
+   
+  }
+}

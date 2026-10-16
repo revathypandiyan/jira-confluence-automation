@@ -1,0 +1,10 @@
+- Keep each instruction focused on one workflow and write short, actionable bullet points.
+- Save project instructions in `./instructions/` using descriptive verb-first names ending in `.agent.md`.
+- Keep instruction content platform-agnostic; put editor-specific loading behavior in thin wrappers and settings.
+- Add each available instruction to `./instructions/main.agent.md` with a relative link, one-line description, and useful Keywords.
+- Do not list missing instruction files as available; record unfinished instruction ideas as planned.
+- For GitHub Copilot, add a prompt wrapper under `./.github/prompts/` that points to the relevant instruction.
+- Configure `./.github/copilot-instructions.md` to load `./instructions/main.agent.md` completely on every prompt.
+- Enable Copilot instruction files in `./.vscode/settings.json` and preserve existing settings when updating it.
+- Verify entry-point links, prompt targets, catalog references, and JSON syntax after configuration changes.
+- Refer to the canonical guide when additional setup details are needed: https://github.com/codenjoyme/vibecoding-training/blob/main/instructions/creating-instructions.agent.md
